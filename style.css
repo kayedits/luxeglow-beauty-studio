@@ -1,0 +1,1238 @@
+
+/* =========================================
+   LUXEGLOW BEAUTY STUDIO
+   PREMIUM RESPONSIVE WEBSITE
+   COMPLETE STYLESHEET
+========================================= */
+
+/* 1. GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fffaf8;
+  color: #382832;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 95px 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #a95e79;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 45px);
+}
+
+p {
+  color: #75656e;
+}
+
+::selection {
+  background: #a95e79;
+  color: white;
+}
+
+
+/* 2. HEADER & NAVIGATION
+========================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #fffaf8;
+  z-index: 1000;
+  box-shadow: 0 3px 18px rgba(56, 40, 50, 0.05);
+}
+
+.nav-container {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #382832;
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #b66c87;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #b66c87;
+}
+
+.nav .nav-book {
+  background: #a95e79;
+  color: white;
+  padding: 12px 19px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav .nav-book:hover {
+  background: #82445e;
+  color: white;
+}
+
+/* Hamburger button */
+
+.menu-toggle {
+  display: none;
+  width: 43px;
+  height: 43px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1002;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #382832;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active span:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* 3. HERO SECTION
+========================================= */
+
+.hero {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #382832;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 20, 29, 0.78),
+    rgba(35, 20, 29, 0.30)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 110px 0;
+  text-align: left;
+}
+
+.hero .eyebrow {
+  color: #f4c7d7;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(45px, 6vw, 72px);
+  line-height: 1.12;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: #f5e8ed;
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.primary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #a95e79;
+  color: #fff;
+  padding: 15px 25px;
+  min-height: 50px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.primary-button:hover {
+  background: #82445e;
+  transform: translateY(-3px);
+}
+
+.hero-note {
+  margin-top: 24px;
+  color: #f1dfe6;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+
+/* 4. INTRODUCTION
+========================================= */
+
+.intro {
+  background: #fffaf8;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 760px;
+}
+
+.intro h2 {
+  max-width: 680px;
+  margin: 0 auto 20px;
+  line-height: 1.25;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #a95e79;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.text-link:hover {
+  color: #82445e;
+}
+
+
+/* 5. SERVICES SECTION
+========================================= */
+
+.services {
+  background: #f7eeef;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  max-width: 590px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(65, 36, 50, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(65, 36, 50, 0.11);
+}
+
+.service-image-wrap {
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  background: #eadde1;
+}
+
+.service-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .service-image-wrap img {
+  transform: scale(1.05);
+}
+
+.service-info {
+  padding: 28px;
+}
+
+.service-number {
+  display: block;
+  color: #a95e79;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.service-info h3 {
+  font-size: 26px;
+  margin-bottom: 13px;
+}
+
+.service-info p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 19px;
+}
+
+.service-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  color: #a95e79;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.service-info a:hover {
+  color: #82445e;
+  gap: 13px;
+}
+
+
+/* 6. ABOUT SECTION
+========================================= */
+
+.about {
+  background: #fffaf8;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eadde1;
+}
+
+.about-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 22px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  background: linear-gradient(
+    transparent,
+    rgba(35, 20, 29, 0.75)
+  );
+}
+
+.about-image-caption span {
+  display: block;
+  color: #f1c5d5;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.about-content h2 {
+  font-size: clamp(34px, 4vw, 46px);
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 17px;
+}
+
+.about-content .primary-button {
+  margin-top: 12px;
+}
+
+
+/* 7. BEAUTY GALLERY
+========================================= */
+
+.gallery {
+  background: #f7eeef;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 20px;
+  height: 390px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #eadde1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-tall {
+  grid-row: span 1;
+}
+
+.gallery-note {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+  font-style: italic;
+  color: #8d7781;
+}
+
+
+/* 8. CALL TO ACTION
+========================================= */
+
+.cta-section {
+  padding: 100px 0;
+  text-align: center;
+  background: #382832;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content .eyebrow {
+  color: #e8b8ca;
+}
+
+.cta-content h2 {
+  color: white;
+  margin-bottom: 17px;
+  font-size: clamp(38px, 5vw, 50px);
+}
+
+.cta-content p {
+  color: #e9dbe1;
+  max-width: 520px;
+  margin: 0 auto 30px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.light-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  min-height: 50px;
+  background: white;
+  color: #82445e;
+  padding: 15px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.light-button:hover {
+  background: #f3dce5;
+  transform: translateY(-3px);
+}
+
+
+/* 9. CONTACT SECTION
+========================================= */
+
+.contact {
+  background: #fffaf8;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.contact-heading h2 {
+  font-size: clamp(34px, 4vw, 47px);
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.contact-heading > p {
+  max-width: 560px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #f0e3e7;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+}
+
+.contact-detail:hover {
+  border-color: #c58ba0;
+  box-shadow: 0 8px 20px rgba(65, 36, 50, 0.06);
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f7e9ee;
+  color: #a95e79;
+  font-size: 26px;
+}
+
+.contact-detail h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: #382832;
+}
+
+.contact-detail p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.whatsapp-contact {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.whatsapp-contact:hover {
+  background: #fdf3f6;
+}
+
+.whatsapp-contact .contact-icon {
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-contact:hover .contact-icon {
+  transform: scale(1.08);
+}
+
+
+/* CONTACT BOOKING CARD */
+
+.contact-card {
+  position: relative;
+  background: linear-gradient(145deg, #49323f, #2d2029);
+  color: white;
+  padding: 55px 40px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(56, 40, 50, 0.15);
+}
+
+.booking-label {
+  color: #edc2d2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.booking-decoration {
+  font-size: 42px;
+  color: #e9b6ca;
+  margin: 15px 0;
+}
+
+.contact-card h3 {
+  font-size: clamp(29px, 3vw, 37px);
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-card p {
+  color: #e7d8df;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 350px;
+  margin: 0 auto 28px;
+}
+
+.contact-button {
+  width: 100%;
+  max-width: 300px;
+}
+
+.contact-button span {
+  margin-left: 5px;
+}
+
+.contact-card small {
+  display: block;
+  color: #d7c2cc;
+  font-size: 11px;
+  margin-top: 22px;
+}
+
+
+/* 10. FOOTER
+========================================= */
+
+.footer {
+  background: #291e26;
+  padding: 55px 0 40px;
+  text-align: center;
+}
+
+.footer-logo {
+  color: white;
+  display: inline-block;
+}
+
+.footer-tagline {
+  color: #e0cbd5;
+  font-size: 13px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 28px;
+}
+
+.footer-links a {
+  color: #d4c1ca;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #eab9cc;
+}
+
+.footer-content .copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #ad9ba4;
+}
+
+.footer-content .portfolio-note {
+  color: #ad9ba4;
+  font-size: 11px;
+  margin-top: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+
+/* 11. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 950px) {
+
+  .nav-container {
+    min-height: 75px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 22px 5%;
+    background: #fffaf8;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 13px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1001;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .nav .nav-book {
+    text-align: center;
+    padding: 13px;
+  }
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero-content {
+    padding: 85px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 7vw, 60px);
+  }
+
+  .services-grid {
+    gap: 22px;
+  }
+
+  .service-image-wrap {
+    height: 235px;
+  }
+
+  .service-info {
+    padding: 23px;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .about-image-wrap {
+    height: 370px;
+  }
+
+  .contact-grid {
+    gap: 30px;
+  }
+}
+
+
+/* 12. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 91%;
+  }
+
+  .section-padding {
+    padding: 65px 0;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-image {
+    object-position: 57% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(35, 20, 29, 0.75),
+      rgba(35, 20, 29, 0.40)
+    );
+  }
+
+  .hero-content {
+    width: 91%;
+    padding: 75px 0;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 10vw, 49px);
+    line-height: 1.15;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.85;
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .hero-note {
+    font-size: 11px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+
+  /* INTRODUCTION */
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  .intro p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+
+  /* SERVICES */
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .service-card {
+    border-radius: 8px;
+  }
+
+  .service-image-wrap {
+    height: 240px;
+  }
+
+  .service-info {
+    padding: 23px;
+  }
+
+  .service-info h3 {
+    font-size: 24px;
+  }
+
+  .service-info p {
+    font-size: 14px;
+  }
+
+
+  /* ABOUT */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image-wrap {
+    height: 320px;
+  }
+
+  .about-content h2 {
+    font-size: 35px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 180px;
+    gap: 12px;
+    height: auto;
+  }
+
+  .gallery-tall {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .gallery-item {
+    border-radius: 6px;
+  }
+
+  .gallery-note {
+    font-size: 11px;
+  }
+
+
+  /* CTA */
+
+  .cta-section {
+    padding: 70px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 37px;
+  }
+
+  .cta-content p {
+    font-size: 14px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-heading {
+    margin-bottom: 35px;
+  }
+
+  .contact-heading h2 {
+    font-size: 33px;
+  }
+
+  .contact-heading > p {
+    font-size: 14px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-info {
+    gap: 14px;
+  }
+
+  .contact-detail {
+    padding: 17px;
+    gap: 14px;
+    min-height: 78px;
+  }
+
+  .contact-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+
+  .contact-detail h4 {
+    font-size: 16px;
+  }
+
+  .contact-card {
+    padding: 43px 23px;
+  }
+
+  .contact-card h3 {
+    font-size: 30px;
+  }
+
+  .contact-card p {
+    font-size: 13px;
+  }
+
+
+  /* BUTTONS */
+
+  .primary-button,
+  .light-button {
+    min-height: 49px;
+    font-size: 13px;
+    padding: 13px 19px;
+  }
+
+
+  /* FOOTER */
+
+  .footer {
+    padding: 40px 0 32px;
+  }
+
+  .footer-links {
+    gap: 15px 22px;
+  }
+
+}
+
+
+/* 13. EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .hero {
+    min-height: 510px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .intro h2,
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .service-image-wrap {
+    height: 210px;
+  }
+
+  .about-image-wrap {
+    height: 270px;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 220px 155px;
+  }
+
+  .contact-card {
+    padding: 35px 17px;
+  }
+
+  .contact-detail {
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .contact-detail h4 {
+    font-size: 14px;
+  }
+
+  .primary-button,
+  .light-button {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+
+}
+
+
+/* 14. ACCESSIBILITY & POLISH
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #c58ba0;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
